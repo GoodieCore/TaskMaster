@@ -21,6 +21,7 @@ TaskMaster — это JavaFX приложение для управления п
 
 ## Скриншоты
 ![Main menu](https://github.com/GoodieCore/TaskMaster/assets/138989332/7c5e074f-204c-4d68-b152-8988c5404f21)
+![User menu](https://github.com/GoodieCore/TaskMaster/assets/138989332/e14acb3d-38ba-45af-be4f-9d6b9801d96d)
 
 ## Зависимости
 Для работы приложения необходимы JDK и библиотека JavaFX.
