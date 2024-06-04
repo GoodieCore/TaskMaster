@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="433.0" styleClass="project-shadow" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.taskmaster.PrController">
+   <children>
+      <ImageView fitHeight="250.0" fitWidth="433.0" pickOnBounds="true" preserveRatio="true" />
+      <HBox prefHeight="250.0" prefWidth="433.0" styleClass="project-gradient" stylesheets="@style.css">
+         <children>
+            <VBox prefHeight="250.0" prefWidth="187.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="75.0" prefWidth="186.0" text="Название проекта:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="56.0" prefWidth="192.0" text="Кол-во участников:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="66.0" prefHeight="56.0" prefWidth="192.0" text="Срок до" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="122.0" prefHeight="56.0" prefWidth="192.0" text="Статус проекта" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="250.0" prefWidth="247.0">
+               <children>
+                  <Label fx:id="name" alignment="CENTER" prefHeight="75.0" prefWidth="247.0" text="TaskMaster" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countUs" alignment="CENTER" prefHeight="56.0" prefWidth="253.0" text="1 человек" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="term" alignment="CENTER" layoutX="10.0" layoutY="85.0" prefHeight="56.0" prefWidth="253.0" text="30.06.2024" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="status" alignment="CENTER" layoutX="10.0" layoutY="141.0" prefHeight="56.0" prefWidth="253.0" text="Выполняется" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

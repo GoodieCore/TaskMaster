@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="61.0" prefWidth="650.0" styleClass="project-shadow" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.taskmaster.PrMiniController">
+   <children>
+      <HBox alignment="CENTER" layoutX="-2.0" prefHeight="61.0" prefWidth="650.0" styleClass="pr-background" stylesheets="@style.css">
+         <children>
+            <Label fx:id="name" alignment="CENTER" prefHeight="60.0" prefWidth="162.0" text="Проект" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="term" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="63.0" prefWidth="162.0" text="Срок" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="status" alignment="CENTER" layoutX="113.0" layoutY="10.0" prefHeight="60.0" prefWidth="162.0" text="Статус" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="countus" alignment="CENTER" layoutX="216.0" layoutY="10.0" prefHeight="60.0" prefWidth="226.0" text="Кол-во" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </children>
+</Pane>

@@ -1,0 +1,86 @@
+.gradient-background {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #4169E1, #011D38);
+}
+.line-color {
+    -fx-background-color: #FFFFFF;
+}
+.container {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10;
+}
+.gradient-background {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #4169E1, #011D38);
+}
+.project-background {
+    -fx-background-color: #011D38;
+}
+.project-gradient {
+    -fx-background-color: linear-gradient(to top, #676767, transparent);
+}
+.project-shadow {
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0,10);
+}
+.bottom {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 50;
+}
+.primary-color {
+  -fx-background-color: #13123A;
+}
+.secondary-color {
+    -fx-background-color: #00002C;
+}
+.text-input {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #242551;
+    -fx-text-inner-color: #fff;
+}
+.button-save {
+    -fx-background-color: #242551;
+    -fx-background-radius: 30;
+}
+.choice-box {
+    -fx-background-color: #242551;
+    -fx-text-inner-color: #fff;
+}
+.project-label {
+    -fx-background-color: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+.pr-background {
+    -fx-background-color:#00002C;
+    -fx-border-width: 0 0 4 0;
+    -fx-border-color: #fff;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.form-background {
+    -fx-background-color: #1E90FF
+}
+.line-color-form {
+    -fx-background-color: #00002C;
+}
+.cb {
+    -fx-background-color: gray;
+    -fx-text-inner-color: #fff;
+}
+.cb .label {
+    -fx-text-fill: black; /* установка цвета текста */
+}
+
+.cb .arrow {
+    -fx-background-color: black; /* установка цвета стрелки */
+}
+
+.cb .open-button {
+    -fx-background-color: gray; /* установка цвета кнопки выбора */
+}
+.git-button {
+    -fx-background-color: #808080;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px; /* Радиус закругления краев */
+}
+.git-text {
+    -fx-text-inner-color: black;
+}

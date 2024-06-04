@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="600.0" styleClass="project-shadow" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.taskmaster.FormController">
+   <children>
+      <VBox layoutX="-3.0" layoutY="-3.0" prefHeight="276.0" prefWidth="606.0" styleClass="project-gradient" stylesheets="@style.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="606.0">
+               <children>
+                  <Label fx:id="projectName" alignment="CENTER" prefHeight="72.0" prefWidth="596.0" text="Название проекта">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="606.0">
+               <children>
+                  <Label fx:id="linkText" prefHeight="38.0" prefWidth="353.0">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="roleText" prefHeight="43.0" prefWidth="249.0">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Pane prefHeight="6.0" prefWidth="606.0" styleClass="line-color-form" stylesheets="@style.css" />
+            <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="606.0">
+               <children>
+                  <Label prefHeight="68.0" prefWidth="180.0" text="Ссылка на GitHub">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="textLinkGit" prefHeight="26.0" prefWidth="279.0" styleClass="git-text" stylesheets="@style.css" />
+                  <Button fx:id="saveGitBtn" mnemonicParsing="false" onAction="#onSaveGitBtnClick" prefHeight="37.0" prefWidth="93.0" styleClass="git-button" stylesheets="@style.css" text="Сохранить">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="88.0" prefHeight="58.0" prefWidth="606.0">
+               <children>
+                  <Label prefHeight="68.0" prefWidth="180.0" text="Роль в проекте">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choiceRole" prefHeight="26.0" prefWidth="280.0" styleClass="cb" stylesheets="@style.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin></ChoiceBox>
+                  <Button fx:id="saveRoleBtn" mnemonicParsing="false" onAction="#onSaveRoleBtnClick" prefHeight="37.0" prefWidth="93.0" styleClass="git-button" stylesheets="@style.css" text="Сохранить">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="147.0" prefHeight="58.0" prefWidth="606.0">
+               <children>
+                  <Label fx:id="error" prefHeight="55.0" prefWidth="543.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</Pane>

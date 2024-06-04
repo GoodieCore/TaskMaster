@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.taskmaster.UserController">
+   <left>
+      <VBox prefHeight="800.0" prefWidth="450.0" styleClass="primary-color" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onReturnBtnClick" prefHeight="28.0" prefWidth="70.0" styleClass="button-save" stylesheets="@style.css" text="Назад" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+               <children>
+                  <Circle fill="WHITE" radius="58.0" stroke="WHITE" strokeType="INSIDE" />
+                  <Label fx:id="nameTitle" alignment="CENTER" prefHeight="42.0" prefWidth="211.0" text="Имя" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="40.0" />
+                     </padding>
+                  </Label>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onChangeSessionClick" prefHeight="44.0" prefWidth="129.0" styleClass="button-save" stylesheets="@style.css" text="Войти" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children></VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="secondary-color" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="0.0" prefWidth="850.0" text="Настройки профиля" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
+               </padding></Label>
+            <VBox prefHeight="159.0" prefWidth="850.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label prefHeight="0.0" prefWidth="850.0" text="Детали профиля" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="50.0" right="50.0" top="30.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="850.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="200.0" text="Имя" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Pane prefHeight="87.0" prefWidth="174.0" />
+                        <TextField fx:id="name" prefHeight="26.0" prefWidth="530.0" styleClass="text-input" stylesheets="@style.css">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="76.0" prefHeight="58.0" prefWidth="850.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="200.0" text="Фамилия" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Pane prefHeight="87.0" prefWidth="174.0" />
+                        <TextField fx:id="surname" prefHeight="26.0" prefWidth="530.0" styleClass="text-input" stylesheets="@style.css">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="58.0" prefWidth="850.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="200.0" text="Группа" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Pane prefHeight="87.0" prefWidth="174.0" />
+                        <TextField fx:id="groupus" prefHeight="26.0" prefWidth="530.0" styleClass="text-input" stylesheets="@style.css">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="170.0" prefHeight="58.0" prefWidth="850.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="200.0" text="Должность" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Pane prefHeight="87.0" prefWidth="174.0" />
+                        <ChoiceBox fx:id="choisePost" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="850.0" text="Контактные данные" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="50.0" right="50.0" top="30.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="76.0" prefHeight="58.0" prefWidth="850.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="200.0" text="Номер" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Pane prefHeight="87.0" prefWidth="174.0" />
+                        <TextField fx:id="phone" prefHeight="26.0" prefWidth="530.0" styleClass="text-input" stylesheets="@style.css">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="283.0" prefHeight="58.0" prefWidth="850.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="200.0" text="Email" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Pane prefHeight="87.0" prefWidth="174.0" />
+                        <TextField fx:id="email" prefHeight="26.0" prefWidth="530.0" styleClass="text-input" stylesheets="@style.css">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="377.0" prefHeight="58.0" prefWidth="850.0">
+                     <children>
+                        <Button fx:id="saveBtn1" alignment="CENTER" layoutX="370.0" layoutY="40.0" mnemonicParsing="false" onAction="#onSaveBtnClick" prefHeight="44.0" prefWidth="129.0" styleClass="button-save" stylesheets="@style.css" text="Сохранить" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="425.0" prefHeight="58.0" prefWidth="850.0">
+                     <children>
+                        <Label fx:id="error" alignment="CENTER" prefHeight="35.0" prefWidth="440.0" textFill="#a10000">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

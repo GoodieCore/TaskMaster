@@ -1,0 +1,55 @@
+@startuml
+
+package user {
+    class User {
+        - id: int
+        - name: String
+        - surname: String
+        - groupus: String
+        - phone: String
+        - email: String
+        - post: String
+        - curId: int
+        + User(id: int, name: String, surname: String, groupus: String, phone: String, email: String, post: String)
+        + getId(): int
+        + getName(): String
+        + getSurname(): String
+        + getGroupus(): String
+        + getEmail(): String
+        + getPhone(): String
+        + getPost(): String
+        + getCurId(): int
+        + setId(id: int): void
+        + setName(name: String): void
+        + setEmail(email: String): void
+        + setGroupus(groupus: String): void
+        + setPhone(phone: String): void
+        + setPost(post: String): void
+        + setSurname(surname: String): void
+        + getLastUserId(): int
+    }
+
+    class UserDAO {
+        + getUserById(int id): User
+        + addUser(User user): void
+        + updateSessionUser(): void
+        + getCurrentUserId(): int
+        + findUserByDetails(String name, String surname, String group): User
+    }
+
+    class UserDAOImpl {
+        - URL: String
+        - USERNAME: String
+        - PASSWORD: String
+        - con: Connection
+        + UserDAOImpl()
+        + getUserById(int id): User
+        + addUser(User user): void
+        + updateSessionUser(): void
+        + getCurrentUserId(): int
+        + getLastUserId(): int
+        + findUserByDetails(String name, String surname, String group): User
+    }
+}
+
+@enduml

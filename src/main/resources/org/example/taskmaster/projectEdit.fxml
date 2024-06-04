@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.taskmaster.EPController">
+   <top>
+      <HBox prefHeight="80.0" prefWidth="1300.0" styleClass="primary-color" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backBtn" layoutX="465.0" layoutY="22.0" mnemonicParsing="false" onAction="#onReturnBtnClick" prefHeight="29.0" prefWidth="77.0" styleClass="button-save" stylesheets="@style.css" text="Назад" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children></HBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="728.0" styleClass="secondary-color" stylesheets="@style.css">
+               <children>
+                  <Label prefHeight="47.0" prefWidth="350.0" text="Созданные проекты" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane prefHeight="604.0" prefWidth="727.0" styleClass="container" stylesheets="@style.css">
+                     <content>
+                        <GridPane fx:id="projectGrid" alignment="CENTER" prefHeight="0.0" prefWidth="650.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
+                     <padding>
+                        <Insets bottom="60.0" top="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children></VBox>
+            <Pane fx:id="corePane" prefHeight="720.0" prefWidth="728.0" styleClass="secondary-color" stylesheets="@style.css">
+               <children>
+                  <VBox prefHeight="720.0" prefWidth="728.0">
+                     <children>
+                        <HBox prefHeight="0.0" prefWidth="728.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="title" prefHeight="88.0" prefWidth="236.0" text="Создайте новый проект" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="error" prefHeight="100.0" prefWidth="470.0" textFill="RED">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="642.0" prefHeight="1.0" prefWidth="200.0" styleClass="line-color" stylesheets="@style.css" />
+                        <Label prefHeight="39.0" prefWidth="278.0" text="Настройки проекта" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="728.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="117.0" text="Название" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="56.0" prefWidth="79.0" />
+                              <TextField fx:id="nameField" prefHeight="26.0" prefWidth="347.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="144.0" prefHeight="56.0" prefWidth="728.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="117.0" text="Срок сдачи" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="56.0" prefWidth="79.0" />
+                              <TextField fx:id="termField" prefHeight="26.0" prefWidth="347.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="200.0" prefHeight="56.0" prefWidth="728.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="117.0" text="Статус" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="56.0" prefWidth="79.0" />
+                              <ChoiceBox fx:id="statusBox" prefHeight="26.0" prefWidth="144.0" />
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="1.0" prefWidth="200.0" styleClass="line-color" stylesheets="@style.css" />
+                        <Label layoutX="10.0" layoutY="98.0" prefHeight="46.0" prefWidth="316.0" text="Добавление/удаление студентов" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="200.0" prefHeight="56.0" prefWidth="728.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="117.0" text="Имя" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="56.0" prefWidth="79.0" />
+                              <TextField fx:id="userField" prefHeight="26.0" prefWidth="347.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="359.0" prefHeight="56.0" prefWidth="728.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="117.0" text="Фамилия" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="56.0" prefWidth="79.0" />
+                              <TextField fx:id="surnameField" prefHeight="26.0" prefWidth="347.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="415.0" prefHeight="56.0" prefWidth="728.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="117.0" text="Группа" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="56.0" prefWidth="79.0" />
+                              <TextField fx:id="groupField" prefHeight="26.0" prefWidth="347.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="471.0" prefHeight="56.0" prefWidth="728.0">
+                           <children>
+                              <Button fx:id="addUserBtn" mnemonicParsing="false" onAction="#onAddUserBtnClick" prefHeight="40.0" prefWidth="120.0" styleClass="button-save" stylesheets="@style.css" text="Добавить" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin></Button>
+                              <Button fx:id="deleteUserBtn" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#onDeleteUserBtnClick" prefHeight="36.0" prefWidth="120.0" styleClass="button-save" stylesheets="@style.css" text="Удалить" textFill="WHITE" />
+                              <Label fx:id="errorUser" alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="117.0" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="312.0" prefHeight="1.0" prefWidth="200.0" styleClass="line-color" stylesheets="@style.css" />
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="471.0" prefHeight="56.0" prefWidth="728.0">
+                           <children>
+                              <Button fx:id="createProjectBtn" mnemonicParsing="false" onAction="#onCreateProjectBtnClick" prefHeight="46.0" prefWidth="119.0" styleClass="button-save" stylesheets="@style.css" text="Создать" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="changeProjectBtn" layoutX="568.0" layoutY="15.0" mnemonicParsing="false" onAction="#onChangeProjectBtnClick" prefHeight="46.0" prefWidth="119.0" styleClass="button-save" stylesheets="@style.css" text="Изменить" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="deleteProjectBtn" layoutX="449.0" layoutY="15.0" mnemonicParsing="false" onAction="#onDeleteProjectBtnClick" prefHeight="46.0" prefWidth="119.0" styleClass="button-save" stylesheets="@style.css" text="Удалить" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></Pane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

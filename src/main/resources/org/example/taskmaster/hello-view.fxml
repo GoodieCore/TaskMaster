@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" styleClass="gradient-background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.taskmaster.HelloController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="105.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="94.0" prefWidth="184.0" text="TASK MASTER" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="23.0" />
+               </font>
+            </Label>
+            <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="1149.0" styleClass="line-color" stylesheets="@style.css" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+
+   </left>
+   <center>
+      <VBox prefHeight="192.0" prefWidth="1279.0" BorderPane.alignment="CENTER">
+
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="CENTER" prefHeight="254.0" prefWidth="1279.0" styleClass="container" stylesheets="@style.css">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="254.0" prefWidth="300.0">
+                     <children>
+                        <Button fx:id="profileBTN" mnemonicParsing="false" onAction="#onEditProfileBtnClick" prefHeight="64.0" prefWidth="172.0" styleClass="bottom" stylesheets="@style.css" text="Профиль" textFill="ROYALBLUE">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font></Button>
+
+                        <Label fx:id="nameTitle" alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="Имя" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="postTitle" alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="Должность" textFill="#ffffffbf">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Pane maxHeight="-Infinity" prefHeight="100.0" prefWidth="1.0" styleClass="line-color" stylesheets="@style.css" />
+                  <VBox alignment="CENTER" layoutX="499.0" layoutY="10.0" prefHeight="254.0" prefWidth="300.0">
+                     <children>
+                        <Button fx:id="editBtn" mnemonicParsing="false" onAction="#onEditProjectBtnClick" prefHeight="64.0" prefWidth="172.0" styleClass="bottom" stylesheets="@style.css" text="Редактор" textFill="ROYALBLUE">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="Проекты" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nPosts" alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="25 постов" textFill="#ffffffbf">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="container" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="prGrid" prefHeight="10.0" prefWidth="0.0" styleClass="gradient-background" stylesheets="@style.css">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

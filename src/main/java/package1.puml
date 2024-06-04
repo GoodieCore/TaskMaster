@@ -1,0 +1,48 @@
+@startuml
+
+package org.example.taskmaster {
+    class HelloController {
+        - initialize(URL url, ResourceBundle resourceBundle): void
+        - onEditProfileBtnClick(): void
+        - onEditProjectBtnClick(): void
+    }
+
+    class PrController {
+        - setData(Project project): void
+    }
+
+    class UserController {
+        - initialize(URL url, ResourceBundle resourceBundle): void
+        - onReturnBtnClick(): void
+        - onSaveBtnClick(): void
+        - checkingInput(): boolean
+        - onChangeSessionClick(): void
+    }
+
+    class EPController {
+        - initialize(URL url, ResourceBundle resourceBundle): void
+        - onAddUserBtnClick(): void
+        - onDeleteUserBtnClick(): void
+        - onCreateProjectBtnClick(): void
+        - onDeleteProjectBtnClick(): void
+        - onChangeProjectBtnClick(): void
+        - onReturnBtnClick(): void
+    }
+
+    class FormController {
+        - setProjectName(String name): void
+        - setSelectedProject(Project project): void
+        - onSaveGitBtnClick(): void
+        - onSaveRoleBtnClick(): void
+        - initialize(): void
+        - displayGitHubLink(): void
+        - displayUserProject(): void
+        - checkUserProject(): void
+    }
+
+    class PrMiniController {
+        - setData(Project project): void
+    }
+}
+
+@enduml

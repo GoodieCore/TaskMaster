@@ -1,0 +1,67 @@
+@startuml
+
+package project {
+    class Project {
+        - id: int
+        - name: String
+        - term: String
+        - status: String
+        - countUs: int
+        + Project()
+        + getId(): int
+        + getName(): String
+        + getTerm(): String
+        + getStatus(): String
+        + getCountUs(): int
+        + setId(int id): void
+        + setName(String name): void
+        + setTerm(String term): void
+        + setStatus(String status): void
+        + setCountUs(int countUs): void
+        + toString(): String
+    }
+
+    class ProjectDAO {
+        + getAllProjects(): List<Project>
+        + getProjectById(int id): Project
+        + addProject(Project project): void
+        + updateProject(Project project): void
+        + deleteProject(int id): void
+        + getProjectIdByName(String projectName): int
+        + addLinkGitHub(LinkGitHub linkGitHub): void
+        + getLinkGitHubByProjectId(int projectId): LinkGitHub
+        + deleteLinkGitHub(LinkGitHub linkGitHub): void
+    }
+
+    class ProjectDAOImpl {
+        - URL: String
+        - USERNAME: String
+        - PASSWORD: String
+        - con: Connection
+        + ProjectDAOImpl()
+        + getAllProjects(): List<Project>
+        + getProjectById(int id): Project
+        + addProject(Project project): void
+        + updateProject(Project project): void
+        + deleteProject(int id): void
+        + getProjectIdByName(String projectName): int
+        + addLinkGitHub(LinkGitHub linkGitHub): void
+        + getLinkGitHubByProjectId(int projectId): LinkGitHub
+        + deleteLinkGitHub(LinkGitHub linkGitHub): void
+        + getConnection(): Connection
+    }
+
+    class LinkGitHub {
+        - projectId: int
+        - githubLink: String
+        + LinkGitHub(projectId: int, githubLink: String)
+        + getProjectId(): int
+        + getGithubLink(): String
+        + setProjectId(int projectId): void
+        + setGithubLink(String githubLink): void
+        + isValidGitHubLink(String link): boolean
+    }
+
+}
+
+@enduml
