@@ -332,6 +332,11 @@ public class EPController implements Initializable {
 ```
 ------------------------
 
+## Архитектура
+Диаграмма классов:
+
+![diagramClass](https://github.com/GoodieCore/TaskMaster/assets/138989332/19eb2ec9-abe3-4cf9-ad8b-338bc34e8370)
+
 ## Зависимости
 Для работы приложения необходимы JDK и библиотека JavaFX.
 
